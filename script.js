@@ -20,9 +20,14 @@ fetch('tasks.md')
 
 //needs script to load parser as shown in index.html
 //parse markdown format to html
-function test(placeholder) {
-    console.log("nicht gerendert " + placeholder);
+function parse(text) {
     var md = window.markdownit();
-    var result = md.render(placeholder);
-    console.log("gerendert " + result);
+    var result = md.render(text);
+    return result;
+}
+
+//split results and get sections-array
+function getSections(result) {
+    var sections = result.split("<hr>");
+    console.log(sections);
 }
