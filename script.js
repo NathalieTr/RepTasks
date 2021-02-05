@@ -12,3 +12,8 @@ function time() {
   clock.textContent =
     ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
 }
+
+//read .md file
+fetch('tasks.md')
+  .then(response => response.text())
+  .then(text => test(text));
