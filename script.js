@@ -16,7 +16,7 @@ function time() {
 //read .md file
 fetch('tasks.md')
   .then(response => response.text())
-  .then(text => test(text));
+  .then(text => parse(text));
 
 //needs script to load parser as shown in index.html
 //parse markdown format to html
