@@ -16,10 +16,11 @@ function time() {
 //read .md file
 fetch('tasks.md')
   .then(response => response.text())
-  .then(text => test(text));
+  .then(text => getSections(text));
 
 //split the text
 function getSections(text) {
-    return sections = text.split("-");
+    var sections = text.split("-");
     console.log(sections);
+    return sections;
 }
