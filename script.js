@@ -17,3 +17,9 @@ function time() {
 fetch('tasks.md')
   .then(response => response.text())
   .then(text => test(text));
+
+//split the text
+function getSections(text) {
+    return sections = text.split("-");
+    console.log(sections);
+}
